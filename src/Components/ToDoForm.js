@@ -1,12 +1,19 @@
 import React from 'react'
 
 export class ToDoForm extends React.Component {
+
   render () {
     return (
       <div>
         <form>
-          <input />
-          <button>Add Item</button>
+          <input 
+          placeholder={this.props.state.imputValue}
+          onChange={this.props.onNewTaskTextChange}
+          />
+          <button
+            onSubmit={() => this.props.addNewTask}>
+            Add Item
+          </button>
         </form>
       </div>
     )
