@@ -7,10 +7,11 @@ export class ToDoList extends React.Component {
         return (
             <div>
                 <ul>
-                    { tasks.length === 0 ? null :
-                        tasks.map((task) => (
-                        <li key={task.id}>{task.text}</li>
-                        )
+                    {tasks.map((task, keyID) => {
+                        return <li key={task + Math.random()}>
+                            {task.text}
+                        </li>
+                    }
                     )}
                 </ul>
             </div>
