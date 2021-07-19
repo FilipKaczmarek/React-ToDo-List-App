@@ -37,7 +37,7 @@ export class ToDo extends React.Component {
   render() {
     return (
       <div>
-        <ToDoHeader text={'To-Do App'} />
+        <ToDoHeader text={'To-Do App'}/>
         <ToDoForm
           state={this.state}
           onNewTaskTextChange={this.onNewTaskTextChange}

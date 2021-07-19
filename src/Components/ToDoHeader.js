@@ -1,12 +1,12 @@
 import React from 'react'
-
+import '../index.css'
 
 export class ToDoHeader extends React.Component {
   render () {
     const { text } = this.props
 
     return (
-      <div>
+      <div className={'todo-list__header'}>
         <h1>
           {text}
         </h1>
