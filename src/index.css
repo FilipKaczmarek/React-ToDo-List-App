@@ -106,3 +106,9 @@ code {
   outline: none;
   cursor: pointer;
 }
+
+.empty-list{
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2rem;
+}
