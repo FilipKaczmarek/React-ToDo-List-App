@@ -12,10 +12,10 @@ export class ToDoForm extends React.Component {
           value={this.props.state.inputText}
           placeholder={this.props.state.imputValue}
           onChange={this.props.onNewTaskTextChange}
-          className={'todo-form__input'}
+          className={'todo-form__input todo-form__item'}
           />
           <button
-          className={'todo-form__button'}
+          className={'todo-form__button todo-form__item'}
           >
             Add Item
           </button>

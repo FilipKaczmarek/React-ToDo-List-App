@@ -4,6 +4,8 @@ import ToDoHeader from './ToDoHeader'
 import ToDoForm from './ToDoForm'
 import ToDoList from './ToDoList'
 
+import '../index.css'
+
 export class ToDo extends React.Component {
   state = {
     imputValue: 'Type new item',
@@ -36,7 +38,7 @@ export class ToDo extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id={'main--todo'}>
         <ToDoHeader text={'To-Do App'}/>
         <ToDoForm
           state={this.state}
