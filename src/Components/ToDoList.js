@@ -21,7 +21,7 @@ export class ToDoList extends React.Component {
                     tasksFiltered.map((task, keyID) => {
                         return (<li key={task.id} className={'todo-list__list-item'}>
                             <span>{task.text}</span> 
-                            <button key={task.id} onClick={this.props.deleteTask}><FaTrashAlt /></button>
+                            <button key={task.id} onClick={() => this.props.deleteTask(task.id)}><FaTrashAlt /></button>
                         </li>)
                     }
                     )}

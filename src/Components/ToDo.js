@@ -36,6 +36,24 @@ export class ToDo extends React.Component {
     }))
   }
   
+  // deleteTask = (id) => {
+  //   this.setState((prevState) => ({
+  //     tasks: prevState.tasks.filter((task) => task.id !== id )
+  //   }))
+  // }
+
+    deleteTask = (id) => {
+    this.setState((prevState) => ({
+      tasks: prevState.tasks.map((task) => {
+        if (task.id !== id ) return task
+
+        return {
+          ...task,
+          isDeleted: !task.isDeleted
+        }
+      } )
+    }))
+  }
 
   render() {
     return (
