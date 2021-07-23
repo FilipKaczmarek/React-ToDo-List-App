@@ -42,7 +42,7 @@ export class ToDo extends React.Component {
   //   }))
   // }
 
-    deleteTask = (id) => {
+  deleteTask = (id) => {
     this.setState((prevState) => ({
       tasks: prevState.tasks.map((task) => {
         if (task.id !== id ) return task
