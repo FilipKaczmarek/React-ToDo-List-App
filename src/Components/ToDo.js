@@ -27,7 +27,7 @@ export class ToDo extends React.Component {
     const newTask = {
       id: (Math.random() + Math.random()),
       text: this.state.inputText,
-      isCompleted: false
+      isDeleted: false,
     }
 
     this.setState((prevState) => ({
@@ -35,6 +35,7 @@ export class ToDo extends React.Component {
       tasks: prevState.tasks.concat(newTask)
     }))
   }
+  
 
   render() {
     return (
@@ -45,7 +46,9 @@ export class ToDo extends React.Component {
           onNewTaskTextChange={this.onNewTaskTextChange}
           addNewTask={this.addNewTask}
         />
-        <ToDoList state={this.state} />
+        <ToDoList 
+        state={this.state} 
+        deleteTask={this.deleteTask}/>
       </div>
     )
   }

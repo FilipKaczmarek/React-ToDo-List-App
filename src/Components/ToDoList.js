@@ -7,6 +7,8 @@ export class ToDoList extends React.Component {
     render() {
         const { tasks } = this.props.state
 
+        let tasksFiltered = tasks.filter(tasks => tasks.isDeleted !== true )
+
         return (
             <div className={'todo-list__container'}>
                 <ul className={'todo-list__list'}>
@@ -16,10 +18,10 @@ export class ToDoList extends React.Component {
                         className={'empty-list'}
                     >List has no items</li> 
                     :
-                    tasks.map((task, keyID) => {
-                        return (<li key={task + Math.random()} className={'todo-list__list-item'}>
+                    tasksFiltered.map((task, keyID) => {
+                        return (<li key={task.id} className={'todo-list__list-item'}>
                             <span>{task.text}</span> 
-                            <button><FaTrashAlt /></button>
+                            <button key={task.id} onClick={this.props.deleteTask}><FaTrashAlt /></button>
                         </li>)
                     }
                     )}
